@@ -1,4 +1,5 @@
 <style lang="less">
+  @import '../style/weui.less';
   input {
     border: 1rpx solid #ccc;
     display: inline-block;
@@ -64,6 +65,16 @@ module.exports.getTime = getTime;
 
     <panel>
       <div class="title" slot="title">测试引入vant</div>
+      <view class="weui-cells__title">带说明的列表项</view>
+      <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+              <view class="weui-cell__bd">标题文字</view>
+              <view class="weui-cell__ft">说明文字</view>
+          </view>
+      </view>
+    </panel>
+    <panel>
+      <div class="title" slot="title">测试引入weui</div>
       <van-button type="primary">welcome weapp</van-button>
     </panel>
     <panel>
