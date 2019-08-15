@@ -1,0 +1,13 @@
+{
+  "description": "wepy vant demo",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "wepy-vant",
+  "miniprogramRoot": "./weapp"
+}
