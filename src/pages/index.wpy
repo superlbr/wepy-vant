@@ -64,7 +64,7 @@ module.exports.getTime = getTime;
     </div>
 
     <panel>
-      <div class="title" slot="title">测试引入vant</div>
+      <div class="title" slot="title">测试引入weui</div>
       <view class="weui-cells__title">带说明的列表项</view>
       <view class="weui-cells weui-cells_after-title">
           <view class="weui-cell">
@@ -74,8 +74,9 @@ module.exports.getTime = getTime;
       </view>
     </panel>
     <panel>
-      <div class="title" slot="title">测试引入weui</div>
+      <div class="title" slot="title">测试引入vant</div>
       <van-button type="primary">welcome weapp</van-button>
+      <van-picker :columns="columns" @change="onChangeColumn" />
     </panel>
     <panel>
       <div class="title" slot="title">测试数据绑定</div>
@@ -150,6 +151,7 @@ module.exports.getTime = getTime;
         </view>
       </slide-view>
      </panel>
+     <van-toast id="van-toast" />
     <!--toast /-->
   </div>
 </template>
@@ -159,6 +161,7 @@ module.exports.getTime = getTime;
   import eventHub from '../common/eventHub';
   import { mapState } from '@wepy/x';
   import store from '../store';
+  import Toast from '@/static/vant/toast/toast';
   import testMixin from '../mixins/test'
 
   wepy.page({
@@ -179,8 +182,6 @@ module.exports.getTime = getTime;
       }
     },
 
- 
-
     mixins: [testMixin],
 
     data: {
@@ -193,6 +194,7 @@ module.exports.getTime = getTime;
       setTimeoutTitle: '标题三秒后会被修改',
       count: 0,
       netrst: '',
+      columns: ['杭州', '宁波', '温州'],
       groupList: [
         {
           id: 1,
@@ -294,6 +296,10 @@ module.exports.getTime = getTime;
       },
       counterEmit (num) {
         console.log(`${this.$is} receive event, the number is: ${num}`);
+      },
+      onChangeColumn(e) {
+        const { picker, value, index } = e.$wx.detail;
+        Toast(`当前值：${value}, 当前索引：${index}`);
       }
     },
 
@@ -319,6 +325,8 @@ module.exports.getTime = getTime;
     navigationBarTitleText: 'WePY 2.0 Vant',
     usingComponents: {
       "van-button": '~@/static/vant/button',
+      "van-picker": '~@/static/vant/picker',
+      "van-toast": '~@/static/vant/toast',
       panel: '~@/components/panel',
       counter: '~counter',
       list: '../components/list',

@@ -9,6 +9,9 @@
       "van-button": '~@/static/vant/button'
     }
    ```
+3. 已知问题
+  a. picker组件toolbar.wxml打包可能丢失，检查之后手动拷贝即可
+  b. Tab点击不触发 tabs中this.trigger('click')=>'tap'
 
 ## use weui in wepy2
 reference [wepy-weui](https://github.com/wepyjs/wepy-weui-demo)
