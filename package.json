@@ -16,7 +16,7 @@
   "author": "Baorong Li <superlbr@126.com>",
   "license": "MIT",
   "dependencies": {
-    "@wepy/core": "^2.0.0-alpha.14",
+    "@wepy/core": "^2.0.0-alpha.15",
     "@wepy/x": "^2.0.3",
     "miniprogram-slide-view": "0.0.4"
   },
@@ -24,7 +24,7 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@wepy/babel-plugin-import-regenerator": "0.0.4",
-    "@wepy/cli": "^2.0.0-alpha.25",
+    "@wepy/cli": "^2.0.0-alpha.26",
     "@wepy/compiler-babel": "^2.0.5",
     "@wepy/compiler-less": "^2.0.7",
     "babel-eslint": "^7.2.1",
