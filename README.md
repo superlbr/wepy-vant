@@ -2,7 +2,7 @@
 [init](https://wepyjs.github.io/wepy-docs/2.x/#/base/getstart) 
 
 ## use vant-weapp in wepy2
-1. copy vant-weapp dist
+1. copy vant-weapp dist (version 1.1.0)
 2. use in this way
    ```
     usingComponents: {
